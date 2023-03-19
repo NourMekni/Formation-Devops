@@ -1,0 +1,44 @@
+Node :
+1)touch Docker file
+FROM node
+WORKDIR /app
+COPY ./app
+RUN npm install
+EXPOSE 80
+CMD ["node","server.js"]
+docker build .
+2) $ docker run -p 3008:80 sha256:3e80ac292fcfdca5080668726d69b67ba9c65b4ea7f510813e2bf8e0eeed7fc4
+3) docker run -p 3009:80 --name node sha256:3e80ac292fcfdca5080668726d69b67ba9c65b4ea7f510813e2bf8e0eeed7fc4
+4)  $ docker stop node
+$ docker stop cranky
+$ docker container prune
+$ docker image prune
+5)$ docker build -t image-node:1 .
+6) $ docker run -p 3008:80 --rm --name node sha256:de966e015a41db1798d9731479f9116fa33283ddfc0a98644cfa0de7de0bab92
+Python
+1)touch Dockerfile
+FROM python
+WORKDIR /app
+COPY . /app
+CMD ["python","bmi.py"]
+docker build .
+2)$ docker run -it sha256:9df51bbaeb3d211fa928e9eab134598d50dd5df320f911074507579b0fb585a6
+3)$ docker run -it --name python sha256:9df51bbaeb3d211fa928e9eab134598d50dd5df320f911074507579b0fb585a6
+$ docker stop python
+$ docker start python
+4) $ docker stop python
+$ docker stop cranky-perlmen
+docker container prune
+docker image prune
+5) $ docker build -t image-python:1 .
+6)
+coche_blanche
+yeux
+alléluia
+
+Réagir
+
+Répondre
+
+11 h 16
+6)$ docker run -it  --rm --name python-c2 sha256:80f2416ec27771f9a4085671c6d6b70ad514b3d95c16876596a72f228f0c980b
